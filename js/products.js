@@ -1,4 +1,4 @@
-fetch("../js/data.json")
+fetch("https://rubentg11.github.io/CARDZ/data.json")
   .then(response => response.json())
   .then(json => {
     let products = document.getElementById("products").innerHTML;
