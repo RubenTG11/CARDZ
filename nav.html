@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/nav.css">
+    <title>nav</title>
+</head>
+<body >
+    <div class="navwrapper">
+        <div class="navbar">
+            <img data-open-modal class="shoppingCard" src="./assets/shopping_card.svg" loading="lazy" alt="shopping_card"/>
+            <img class="logo" src="./assets/logo.svg" loading="lazy" alt="logo"/>
+
+            
+            <!-- represent the menu items -->
+            <div class="menu">
+                <div class="options">
+                <a href="./index.html"><div class="option selected">Home</div></a>
+                <a href="./shop.html"><div class="option">Shop</div></a>
+                </a><div class="option">Über Uns</div></a>
+                </div>
+            </div>
+
+            
+            <!-- include a so called hamburger menu for the mobile view -->
+            <div class="hamburger" onclick="document.querySelector('.navbar').classList.toggle('active')">
+                <div class="stroke stroke1"></div>
+                <div class="stroke stroke2"></div>
+                <div class="bottomstroke stroke3"></div>
+            </div>
+        </div>
+    </div>
+
+    <dialog class="modal" data-modal>
+        <div class="modalContent">
+            <h1 class="modalTitle">Ihre Bestellung</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Produkt</th>
+                    <th>Preis</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Test-Produkt 1</td>
+                    <td>6.000€</td>
+                </tr>
+                <tr class="active-row">
+                    <td>Gesamt</td>
+                    <td>6.000€</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <button class="closeModalButton" data-close-modal>Schließen</button>
+    </div>
+    </dialog>
+</body>
+
+<script>
+    const openModal = document.querySelector("[data-open-modal]")
+    const closeModal = document.querySelector("[data-close-modal]")
+    const modal = document.querySelector("[data-modal]")
+
+    openModal.addEventListener("click", () => {
+        modal.showModal()
+    })
+
+    closeModal.addEventListener("click", () => {
+        modal.close()
+    })
+</script>
+</html>

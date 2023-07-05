@@ -1,0 +1,35 @@
+@import url("../css/variables.css");
+
+.footerWrapper{
+    padding: 30px;
+    background-color: var(--secondary-button);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerWrapper * {
+    background-color: transparent;
+}
+
+.links {
+    display: flex;
+    list-style: none;
+}
+
+.links .link {
+    margin: 20px;
+}
+
+.links .link a{
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.emblem {
+    font-size: 12px;
+    font-weight: bold;
+    color: #615959;
+}

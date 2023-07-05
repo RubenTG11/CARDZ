@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+
+    <link rel="stylesheet" href="./css/shop.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#nav').load("./nav.html");
+            $('#footer').load("./footer.html");
+        });
+    </script>
+</head>
+<body>
+    <nav id="nav"></nav>
+
+    <section class="productsSection">
+        <div class="sectionBorder">
+            <div class="searchingProducts">
+                <div class="row">
+                    <h1 class="our-products">Unsere Produkte</h1>
+
+                    
+                    <!-- include a search bar for our prodcuts -->
+                    <input class="search_input" id="search_input" onkeyup="search_product()" type="text" placeholder="Suche"/>
+                </div>
+
+                <div class="divider"></div>
+            </div>
+
+            
+            <!-- in this part all the products will be loaded -->
+            <div class="products" id="products"></div>
+
+        </div>
+    </section>
+
+    <div id="footer"></div>
+    
+    <!-- include the products.js script, which is responsible for the products and the search bar -->
+    <script src="./js/products.js"></script>
+</body>
+
+</html>

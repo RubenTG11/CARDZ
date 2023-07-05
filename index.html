@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>CARDZ</title>
+
+    <!-- include jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    
+    <!-- including a script, which is responsible for loading the nav,what,why and footer section -->
+    <script>
+        $(document).ready(function(){
+            $('#nav').load("./nav.html");
+            $('#what').load("./whatSection.html");
+            $('#why').load("./whySection.html");
+            $('#footer').load("./footer.html");
+        });
+    </script>
+
+</head>
+<body>
+    <nav id="nav"></nav>
+
+    
+    <!-- start of the landing section -->  
+    <section class="landingpagesection">
+        <div class="landingpage">
+
+            
+            <!-- left represents the left part of the website -->
+            <div class="left">
+                <div class="landingtextwrapper">
+                    <h1 class="landingtext">
+                        <span class="line1 line">Modular!</span> <br/>
+                        <span class="line2 line">Kompakt!</span> <br/>
+                        <span class="line3 line">Einfach </span><span class="line4 line accent">Genial!</span>
+                        <p class="landingtext small line5 line">CARDZ - Die Geldbörse für jede Tasche!</p>
+                    </h1>
+
+                    <div class="buttonwrapper desktop">
+                        <button class="buybutton button">Jetzt Kaufen</button>
+                        <button class="infobutton button" onclick="smoothScroll()">Mehr erfahren</button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- right represents the right part of the website -->
+            <div class="right">
+                <div class="productpicwrapper">
+                    <img class="productpic" src="./assets/productpic.svg" loading="lazy" alt="productpic"/>
+                </div>
+
+                <div class="buttonwrapper mobile">
+                    <button class="buybutton button">Jetzt Kaufen</button>
+                    <button class="infobutton button" onclick="smoothScroll()">Mehr erfahren</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="backgroundWrapper">
+
+    <section id="what" class="trans"></section>
+
+    <section id="why" class="trans"></section>
+
+    <footer id="footer"></footer>
+
+    
+
+    
+    <!-- include animeJS and index.js, responsible for the animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
